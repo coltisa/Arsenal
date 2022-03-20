@@ -1,5 +1,7 @@
 安全项目收集，在此处收集一些Github以及其他开源项目
 
+Tips：很多都是Star中的，可以去我的Star里面看看
+
 
 
 ## 安全扫描工具
@@ -88,7 +90,13 @@ https://github.com/0xHJK/TotalPass
 
 
 
-## 
+### [linglong](https://github.com/awake1t/linglong)
+
+[![GitHub stars](https://img.shields.io/github/stars/awake1t/linglong.svg)]()
+
+说明：甲方资产巡航扫描系统。系统定位是发现资产，进行端口爆破。帮助企业更快发现弱口令问题。主要功能包括: 资产探测、端口爆破、定时任务、管理后台识别、报表展示
+
+![](https://github.com/awake1t/linglong/raw/master/img/index.gif)
 
 
 
@@ -134,6 +142,14 @@ https://github.com/saucer-man/penetration-script
 
 
 
+### [MobSF](https://github.com/MobSF/Mobile-Security-Framework-MobSF)
+
+[![GitHub stars](https://img.shields.io/github/stars/MobSF/Mobile-Security-Framework-MobSF.svg)]()
+
+说明：移动安全检测平台Mobile-Security-Framework。Mobile Security Framework (MobSF) is an automated, all-in-one mobile application (Android/iOS/Windows) pen-testing, malware analysis and security assessment framework capable of performing
+
+
+
 ### [ShiroScan](https://github.com/sv3nbeast/ShiroScan)
 
 [![GitHub stars](https://img.shields.io/github/stars/sv3nbeast/ShiroScan.svg)]()
@@ -150,11 +166,11 @@ https://github.com/saucer-man/penetration-script
 
 
 
+### [DefaultCreds-cheat-sheet](https://github.com/ihebski/DefaultCreds-cheat-sheet)
 
+[![GitHub stars](https://img.shields.io/github/stars/ihebski/DefaultCreds-cheat-sheet.svg)]()
 
-
-
-
+说明：各种厂商默认密码表。One place for all the default credentials to assist the Blue/Red teamers activities on finding devices with default password
 
 
 
@@ -310,6 +326,14 @@ https://github.com/0xHJK/dumpall
 
 
 
+### [Mind-Map](https://github.com/phith0n/Mind-Map)
+
+[![GitHub stars](https://img.shields.io/github/stars/phith0n/Mind-Map.svg)]()
+
+说明：各种安全相关思维导图整理收集
+
+
+
 ## 防御工具
 
 ### [X-WAF](https://github.com/xsec-lab/x-waf)
@@ -341,6 +365,22 @@ https://github.com/0xHJK/dumpall
 [![GitHub stars](https://img.shields.io/github/stars/titansec/OpenWAF.svg)]()
 
 说明：基于Lua+NGINX框架。Web security protection system based on openresty。
+
+
+
+### [QSNM](https://github.com/iqiyi/qnsm)
+
+[![GitHub stars](https://img.shields.io/github/stars/iqiyi/qnsm.svg)]()
+
+说明：QNSM(IQIYI Network Security Monitor) 是一个旁路部署的全流量、实时、高性能网络安全监控引擎，基于DPDK开发，集成了DDoS检测和IDPS模块。IDPS模块基于[Suricata](https://github.com/OISF/suricata)，并新增了一些特性。QNSM is network security monitoring framework based on DPDK.
+
+
+
+### [OSSEC-WUI](https://github.com/NunesGodinho/OSSEC-WUI)
+
+[![GitHub stars](https://img.shields.io/github/stars/NunesGodinho/OSSEC-WUI.svg)]()
+
+说明：HIDS OSSEC平台UI
 
 
 
