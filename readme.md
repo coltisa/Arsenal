@@ -80,6 +80,14 @@ https://github.com/cmcmsec/arachni-ui-web
 
 
 
+### [InfoScripts](https://github.com/fatmo666/InfoScripts)
+
+[![GitHub stars](https://img.shields.io/github/stars/fatmo666/InfoScripts.svg)]()
+
+说明：渗透测试/SRC挖掘中用于信息收集的脚本集合，存活主机探测：HostUpCheck.py、HTTP-header信息收集：HeaderCheck.py、CDN探测：CDNCheck.py、CDN绕过：CDNByPass.py、C段扫描：CWebScanner.py、目录爆破：DirBruter.py、整站爬虫：Crawler.py、phpinfo信息收集、分析：PhpInfoCheck.py、端口扫描：PortScanner.py、旁站查询：OtherSiteSearcher.py
+
+
+
 ### TotalPass
 
 [![GitHub stars](https://img.shields.io/github/stars/0xHJK/TotalPass.svg)]()
