@@ -8,7 +8,7 @@ Tips：很多都是Star中的，可以去我的Star里面看看
 
 
 
-### X-RAY
+### [XRAY](https://github.com/chaitin/xray)
 
 [![GitHub stars](https://img.shields.io/github/stars/chaitin/xray.svg)](https://img.shields.io/github/stars/chaitin/xray)
 
@@ -16,13 +16,9 @@ Tips：很多都是Star中的，可以去我的Star里面看看
 
 功能：XSS检测、SQL注入、命令/代码注入检测、目录枚举、弱口令检测
 
-https://github.com/chaitin/xray
 
 
-
-
-
-### Ary
+### [Ary](https://github.com/TeraSecTeam/ary)
 
 [![GitHub stars](https://img.shields.io/github/stars/TeraSecTeam/ary.svg)]()
 
@@ -32,11 +28,11 @@ https://github.com/chaitin/xray
 
 报错：[2002] Failed to execute script ary
 
-https://github.com/TeraSecTeam/ary
 
 
 
-### OneDragon
+
+### [OneDragon](https://github.com/possib1e/OneDragon)
 
 [![GitHub stars](https://img.shields.io/github/stars/possib1e/OneDragon.svg)]()
 
@@ -46,11 +42,11 @@ https://github.com/TeraSecTeam/ary
 
 报错：ModuleNotFoundError: No module named 'config.setting'
 
-https://github.com/possib1e/OneDragon
 
 
 
-### ESD
+
+### [ESD](https://github.com/FeeiCN/ESD)
 
 Enumeration Sub Domain 子域名扫描工具
 
@@ -58,21 +54,19 @@ Enumeration Sub Domain 子域名扫描工具
 
 说明：简洁好用
 
-https://github.com/FeeiCN/ESD
+
 
 ![github_security_collection_esd](https://www.miacraft.cn/public/2022/03/20/github_security_collection_esd.png)
 
 
 
-### Arachni
+### [Arachni](https://github.com/cmcmsec/arachni)
 
 Web Application Security Scanner Framework
 
 [![GitHub stars](https://img.shields.io/github/stars/cmcmsec/arachni.svg)]()
 
 说明：Web漏洞扫描工具，可以扫描XSS、SQL注入等漏洞
-
-https://github.com/cmcmsec/arachni
 
 Arachni - Web User Interface
 
@@ -88,13 +82,13 @@ https://github.com/cmcmsec/arachni-ui-web
 
 
 
-### TotalPass
+### [TotalPass](https://github.com/0xHJK/TotalPass)
 
 [![GitHub stars](https://img.shields.io/github/stars/0xHJK/TotalPass.svg)]()
 
 说明：扫描目标设备是否存在默认密码，搜索常见设备默认密码，支持手动和自动更新密码库。目前支持的设备类型：SSH、Telnet、SNMP、Redis
 
-https://github.com/0xHJK/TotalPass
+
 
 
 
@@ -110,35 +104,33 @@ https://github.com/0xHJK/TotalPass
 
 ## 其它工具
 
-### Proxies
+### [Proxies](https://github.com/0xHJK/Proxies)
 
 [![GitHub stars](https://img.shields.io/github/stars/0xHJK/Proxies.svg)]()
 
 说明：100行Python代码快速获得一个代理池，两分钟获得数千个有效代理
 
-https://github.com/0xHJK/Proxies
 
 
 
-### BerylEnigma
+
+### [BerylEnigma](https://github.com/ffffffff0x/BerylEnigma)
 
 [![GitHub stars](https://img.shields.io/github/stars/ffffffff0x/BerylEnigma.svg)]()
 
 说明：一个CTF+渗透测试工具包，主要实现一些常用的加密与编码功能，在软件使用过程中发现问题或建议欢迎提交 issue,也欢迎提交新功能需求。
 
-https://github.com/ffffffff0x/BerylEnigma
 
 
 
-### Penetration-Script
+
+### [Penetration](https://github.com/saucer-man/penetration-script)-Script
 
 一些渗透测试常用的小脚本
 
 [![GitHub stars](https://img.shields.io/github/stars/saucer-man/penetration-script.svg)]()
 
 功能：爬取免费代理、爬取全国高校域名、端口扫描(python-nmap)、信息泄露扫描(备份文件、GIT、SVN等)、SQL盲注框架、未授权服务扫描、递归爬取某链接中的URL、PHP随机亦或生成某关键字、域名批量转ip、根据网段生成IP列表、内外方面探测开放端口、基于Selenium的登录爆破脚本、子域名相关：子域名爆破、基于各大在线网站的子域名收集脚本、从URL中解析出顶级域名、补天公益爬虫
-
-https://github.com/saucer-man/penetration-script
 
 
 
@@ -184,13 +176,13 @@ https://github.com/saucer-man/penetration-script
 
 ## 社会工程学
 
-### Mailget
+### [Mailget](https://github.com/Ridter/Mailget)
 
 [![GitHub stars](https://img.shields.io/github/stars/Ridter/Mailget.svg)]()
 
 说明：通过脉脉用户猜测企业邮箱
 
-https://github.com/Ridter/Mailget
+
 
 
 
@@ -198,19 +190,19 @@ https://github.com/Ridter/Mailget
 
 扫描Github等平台关键字的项目
 
-### VIPKID GITHUB MONITOR
+###  [VIPKID GITHUB MONITOR](https://github.com/VKSRC/Github-Monitor) 
 
 [![GitHub stars](https://img.shields.io/github/stars/VKSRC/Github-Monitor.svg)](https://img.shields.io/github/stars/VKSRC/Github-Monitor)
 
 说明：代码泄露扫描，支持Docker-Compose部署。VIPKID安全研发团队打造的用于监控Github代码仓库的系统。
 
-https://github.com/VKSRC/Github-Monitor
+
 
 ![](https://github.com/VKSRC/Github-Monitor/raw/master/docs/media/screenshot.jpg)
 
 
 
-### CODE6
+### [CODE6](https://github.com/4x99/code6)
 
 [![GitHub stars](https://img.shields.io/github/stars/4x99/code6.svg)](https://img.shields.io/github/forks/4x99/code6)
 
@@ -218,34 +210,30 @@ https://github.com/VKSRC/Github-Monitor
 
 说明：页面简洁，部署简单。码小六是一款 GitHub 代码泄露监控系统，通过定期扫描 GitHub 发现代码泄露行为，为企业安全保驾护航！
 
-https://github.com/4x99/code6
-
 ![](https://camo.githubusercontent.com/ee5f098462466d25f796af02ca5c48715c1ed6cfb04874389bbedcd390e1b3d3/68747470733a2f2f347839392e6769746875622e696f2f736e617073686f742f636f6465362f686f6d652e706e67)
 
 
 
-### Github leaked patrol
+### [Github leaked patrol](https://github.com/MiSecurity/x-patrol)
 [![GitHub stars](https://img.shields.io/github/stars/MiSecurity/x-patrol.svg)](https://img.shields.io/github/stars/MiSecurity/x-patrol)
 
 说明：小米的代码泄露扫描。Github Leaked Patrol为一款Github泄露巡航工具，提供了WEB管理端，后台数据库支持SQLITE3、MYSQL和POSTGRES
 
-https://github.com/MiSecurity/x-patrol
 
 
 
-### GShark
+
+### [GShark](https://github.com/madneal/gshark)
 
 [![GitHub stars](https://img.shields.io/github/stars/madneal/gshark.svg)](https://img.shields.io/github/stars/madneal/gshark)
 
 说明：Go语言编写的，需要有Go语言环境。Support multi platform, including Gitlab, Github, Searchcode。
 
-https://github.com/madneal/gshark
 
 
 
 
-
-### Hawkeye
+### [Hawkeye](https://github.com/0xbug/Hawkeye)
 
 [![GitHub forks](https://img.shields.io/github/forks/0xbug/Hawkeye.svg)](https://github.com/0xbug/Hawkeye/network)
 [![GitHub stars](https://img.shields.io/github/stars/0xbug/Hawkeye.svg)](https://github.com/0xbug/Hawkeye/stargazers)
@@ -253,15 +241,13 @@ https://github.com/madneal/gshark
 
 说明：监控Github代码库，及时发现员工托管公司代码到GitHub行为并预警，降低代码泄露风险
 
-https://github.com/0xbug/Hawkeye
-
 ![](https://user-images.githubusercontent.com/12611275/46849889-0d2d0980-ce24-11e8-832e-35f6f935bf3b.png)
 
 
 
 
 
-### GSIL
+### [GSIL](https://github.com/FeeiCN/GSIL)
 
 [![GitHub stars](https://img.shields.io/github/stars/FeeiCN/GSIL.svg)](https://img.shields.io/github/stars/FeeiCN/GSIL)
 
@@ -269,16 +255,14 @@ GitHub Sensitive Information Leakage
 
 说明：Python开发的，似乎没有图形化界面。Monitor Github sensitive information leaks in near real time and send alert notifications.
 
-https://github.com/FeeiCN/GSIL
 
 
-
-### Dump all
+### [Dump all](https://github.com/0xHJK/dumpall)
 
 [![GitHub stars](https://img.shields.io/github/stars/0xHJK/dumpall.svg)]()
 
 说明：.git、.svn泄露利用工具。多种泄漏形式，一种利用方式。`.git`源代码泄漏、`.svn`源代码泄漏、`.DS_Store`信息泄漏
-https://github.com/0xHJK/dumpall
+
 
 
 
@@ -393,6 +377,18 @@ https://github.com/0xHJK/dumpall
 
 
 ## 靶场与练习
+
+
+
+### [Pikachu](https://github.com/zhuifengshaonianhanlu/pikachu)
+
+[![GitHub stars](https://img.shields.io/github/stars/zhuifengshaonianhanlu/pikachu.svg)]()
+
+说明：基于PHP，可以使用Docker部署。一个好玩的Web安全-漏洞测试平台
+
+
+
+
 
 ### Hack The Box
 
