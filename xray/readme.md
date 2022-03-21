@@ -1,4 +1,4 @@
-### [X-RAY](https://github.com/chaitin/xray)
+# [XRAY](https://github.com/chaitin/xray)
 
 [![GitHub stars](https://img.shields.io/github/stars/chaitin/xray.svg)](https://img.shields.io/github/stars/chaitin/xray)
 
@@ -8,7 +8,7 @@
 
 
 
-使用说明
+# 使用说明
 
 说明：以下示例xray的运行文件已改为xray
 
