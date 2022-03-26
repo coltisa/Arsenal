@@ -14,6 +14,10 @@
 
 注意：Windows平台使用PowerShell开启
 
+
+
+首先可以使用`./xray help`生成config.yml配置文件
+
 ### 主动扫描
 
 普通扫描
@@ -97,6 +101,55 @@
 
 
 
+开启XRAY代理模式
+
+```
+xray webscan --listen 127.0.0.1:7777 --html-output proxy.html
+```
+
+运行Rad
+
+```
+rad -t http://example.com -http-proxy 127.0.0.1:7777
+```
+
+
+
+Rad爬取
+
+基本结果输出示例-text-output
+
+```
+GET https://venus.com/
+GET https://venus.com/static/map/dmap.min.js
+GET https://venus.didachuxing.com/static/map/
+GET https://venus.didachuxing.com/static/
+```
+
+完整版结果输出示例-full-text-output
+
+```
+GET / HTTP/1.1
+Host: venus.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/99.0.4844.74 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Upgrade-Insecure-Requests: 1
+Accept-Encoding: gzip
+
+
+--------------------------------------------------
+GET /static/map/dmap.min.js HTTP/1.1
+Host: venus.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+Accept: */*
+Referer: https://venus.didachuxing.com/
+Accept-Encoding: gzip
+```
+
+
+
+
+
 https://github.com/ox01024/Xray_Rad_Fusion
 
 https://github.com/chaitin/rad
@@ -125,7 +178,73 @@ nohup ./xray servicescan --target-file services.list --html-output services.list
 
 
 
-### reverse 
+### Reverse 
+
+Reverse平台常用于解决没有回显的漏洞探测的情况，最常见的应该属于SSRF和 存储型XSS
+
+依赖Reverse的漏洞类型SSRF、Struts S2-052、FastJSON（高级版）、XXE、
+
+
+
+需要在防火墙上开启UDP 53和指定的HTTP端口
+
+
+
+客户端配置，其它保持默认
+
+```
+reverse:
+  token: "your_token"
+  client:
+    remote_server: true
+    http_base_url: "http://1.1.1.1:80"      
+```
+
+服务端配置，其它保持默认
+
+```
+reverse:
+  db_file_path: "reverse.db"
+  token: "your_token"
+  http:
+  	enabled: true
+    listen_ip: 0.0.0.0
+    listen_port: "80"
+```
+
+在服务端开启Reverse服务
+
+```
+./xray reverse
+```
+
+客户端直接开启扫描进程即可
+
+```
+./xray webscan --basic-crawler https://www.test.com --html-output test.com.html
+```
+
+
+
+*DNS配置主要用于DNS Rebinding等漏洞，如无特殊需要可以不用配置
+
+https://unit42.paloaltonetworks.com/dns-rebinding/
+
+
+
+参考链接
+
+https://docs.xray.cool/#/configration/reverse
+
+https://github.com/gwl7810/xray/blob/master/docs/scenario/reverse_server_ssrf.md
+
+https://blog.csdn.net/xiaofengdada/article/details/122375019
+
+
+
+
+
+
 
 
 
@@ -170,3 +289,15 @@ subdomain 是子域名扫描的命令，仅高级版才有
 官方说明文档
 
 https://docs.xray.cool/#/README
+
+高级版破解
+
+https://www.cnblogs.com/cl0ud/p/13884206.html
+
+
+
+各种联动
+
+https://www.cnblogs.com/jujuxia/p/15361949.html
+
+https://www.bilibili.com/read/cv12314851
