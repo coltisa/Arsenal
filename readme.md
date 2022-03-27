@@ -60,6 +60,22 @@ Enumeration Sub Domain 子域名扫描工具
 
 
 
+### [Goby](https://cn.gobies.org/)
+
+说明：是一款快速梳理资产暴露攻击面的情报挖掘扫描工具，即“网络空间测绘”。可以用来自动爬取子域名、二级域名字典爆破、关联域名查询、支持连接FOFA、XRAY插件、扩大数据源、自定义PoC等
+
+食用指南：https://www.freebuf.com/articles/web/245845.html
+
+
+
+## [RAD](https://github.com/chaitin/rad)
+
+说明：Rad主要是可以通过爬取网站的URL，泛洪辐射到全站，从一个URL开始，辐射到一整个站点空间，一款专为安全扫描而生的浏览器爬虫，也是长亭的可以配合XRAY使用
+
+[![GitHub stars](https://img.shields.io/github/stars/chaitin/rad.svg)]()
+
+
+
 ## [Arachni](https://github.com/cmcmsec/arachni)
 
 Web Application Security Scanner Framework
@@ -171,6 +187,36 @@ https://github.com/cmcmsec/arachni-ui-web
 [![GitHub stars](https://img.shields.io/github/stars/ihebski/DefaultCreds-cheat-sheet.svg)]()
 
 说明：各种厂商默认密码表。One place for all the default credentials to assist the Blue/Red teamers activities on finding devices with default password
+
+
+
+## [YaKit](https://github.com/yaklang/yakit)
+
+[![GitHub stars](https://img.shields.io/github/stars/yaklang/yakit.svg)]()
+
+说明：国产版的BurpSuite类似工具。MITM实现BurpSuite的国产化替代、PoC/Exp的超集，通过GUI快速对目标进行漏洞探测、史上最强的插件系统设计，你想要的应有尽有、Yak Cloud IDE：内置智能提示的Yak语言云IDE、原生支持的内网穿透，横向漏洞测试效率大增、不依赖Java环境即可原生测试Java类
+
+部署说明：https://www.yaklang.io/docs/startup/
+
+使用说明：https://mp.weixin.qq.com/s?__biz=MzI4NTcxMjQ1MA==&mid=2247554048&idx=1&sn=56ec20ad3a1614e714002509aaba806b
+
+
+
+## [OpenCTI](https://github.com/OpenCTI-Platform/opencti)
+
+[![GitHub stars](https://img.shields.io/github/stars/OpenCTI-Platform/opencti.svg)]()
+
+说明：OpenCTI 即 Open Cyber Threat Intelligence Platform，开源网络威胁情报平台。它的创建是为了构建、存储、组织和可视化有关网络威胁的技术和非技术信息。它使用基于 STIX 2 标准的知识模式来执行数据的结构化。并被设计为现代 Web 应用程序，包括 GraphQL API 和面向 UX的前端。此外，OpenCTI 可以与其他工具和应用程序集成，如 MISP、TheHive、MITRE ATT&CK 等
+
+说明参考：https://mp.weixin.qq.com/s?__biz=MzUyMTE0MDQ0OA==&mid=2247491498&idx=1&sn=c2f33f7c09690786fe50dc9d6efe17a4
+
+
+
+## 目录扫描工具
+
+
+
+
 
 
 
@@ -290,6 +336,16 @@ GitHub Sensitive Information Leakage
 
 说明：红队工具
 
+1.getinfo.sh - 内网信息收集shell脚本
+
+2.httpx.sh - httpx+nuclei批量漏洞探测脚本
+
+3.httpx-url.sh - httpx+nuclei单URL漏洞探测脚本
+
+4.get_title.py - 快速从IP+端口从提取HTTP
+
+5.icohash.sh - 获取icon_hash
+
 
 
 ## [1earn ](https://github.com/ffffffff0x/1earn)
@@ -390,6 +446,16 @@ GitHub Sensitive Information Leakage
 
 
 
+## [TIWAP](https://github.com/tombstoneghost/TIWAP)
+
+[![GitHub stars](https://img.shields.io/github/stars/tombstoneghost/TIWAP.svg)]()
+
+说明：TIWAP是一款包含大量漏洞的Web应用渗透测试学习工具，同时也开始一个Web安全测试平台，该工具基于Python和Flask实现其功能。当前版本的TIWAP实验环境中包含了二十种安全漏洞，具体如下所示：、SQL注入、Blind SQL注入、NoSQL注入、Command注入、业务逻辑漏洞、敏感数据泄露、XML外部实体、安全错误配置、反射型XSS、存储型XSS、基于DOM的XSS、HTML注入、不安全的证书验证、硬编码Credentials、不安全的文件上传、暴力破解、目录遍历、跨站请求伪造(CSRF)、服务器端请求伪造(SSRF)、服务器端模板注入(SSTI)
+
+说明参考：https://mp.weixin.qq.com/s?__biz=MjM5NjA0NjgyMA==&mid=2651154560&idx=4&sn=92d991f201725307b8c8fe339d4ad765
+
+
+
 ## Hack The Box
 
 靶场渗透测试练习平台
@@ -405,3 +471,11 @@ https://www.hackthebox.com/universities
 https://zhuanlan.zhihu.com/p/98483328
 
 https://www.cnblogs.com/black--horse/p/14705919.html
+
+
+
+
+
+安全导航
+
+https://www.t00ls.cc/navi.html

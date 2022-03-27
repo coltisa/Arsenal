@@ -99,7 +99,7 @@
 
 ### Rad联动
 
-
+Rad主要是可以通过爬取网站的URL，泛洪辐射到全站，从一个URL开始，辐射到一整个站点空间
 
 开启XRAY代理模式
 
@@ -148,9 +148,32 @@ Accept-Encoding: gzip
 
 
 
+Windows环境下RAD联动XRAY
 
+```python
+import time
+import subprocess
+import os
 
-https://github.com/ox01024/Xray_Rad_Fusion
+#rad
+rad="rad.exe"
+#xray
+xray="xray.exe"
+#xray代理地址
+proxy_add="127.0.0.1:7777"
+
+def Scan(target):
+    rsp = subprocess.Popen([rad,"-t",target,"-http-proxy",proxy_add],start_new_session=True)
+    rsp.communicate()
+with open("target.txt","r") as target_file:
+    outputPath=time.strftime("%Y%m%d%H%M%S",time.localtime())
+    xray_shell = "start cmd /k "+xray+" webscan"+" --listen "+proxy_add+" --html-output "+outputPath+".html"
+    os.system(xray_shell)
+    # 需要先开启XRAY，所以此处暂停一段时间，等待其开启完毕
+    time.sleep(30)
+    for line in target_file:
+        Scan(line.strip("\n"))
+```
 
 https://github.com/chaitin/rad
 
