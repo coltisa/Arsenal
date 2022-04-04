@@ -179,3 +179,61 @@ https://mobsf.github.io/docs/#/zh-cn/
 
 
 
+### 与Genymotion对接
+
+[已成功测试]
+
+环境信息
+
+Ubuntu 18.04 可上网，最好更改APT安装源
+
+Genymotion&VirtualBox，推荐使用Genymotion对接，使用其他模拟器对接会有adb命令错误
+
+\#Genymotion首先需要注册账号才能下载
+
+下载链接：
+
+https://www.genymotion.com/download/
+
+\#建议下载带有VirtualBox版本的，直接捆绑VirtualBox安装
+
+安装好后选择相应手机和系统版本发虚机，其Android虚机其实是在VirtualBox中运行
+
+在MobSF虚机中先安装ADB和mitmproxy
+
+```
+sudo  apt-get install android-tools-adb android-tools-fastboot  sudo  apt-get install mitmproxy  
+```
+
+MobSF也配置好相应的IP和端口
+
+配置MobSF/settings.py的参数
+
+```python
+ANALYZER_IDENTIFIER  = '192.168.200.35:5555'  
+```
+
+\#注意VirtualBox和Genymotion中可以都将网卡设置为桥接模式
+
+设置相应命令的环境变量
+
+```
+source  /MobSF/Mobile-Security-Framework-MobSF-master/venv/bin/activate  
+```
+
+配置完后开启MobSF服务，进入动态测试页面即可开始测试
+
+```
+python3 manage.py runserver 0.0.0.0:8081  
+```
+
+ 
+
+Genymotion安装教程：
+
+https://blog.csdn.net/yht2004123/article/details/80146989
+
+
+
+
+
