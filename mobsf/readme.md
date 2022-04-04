@@ -99,6 +99,8 @@ apt  install xfonts-75dpi  dpkg -i  wkhtmltox_0.12.5-1.bionic_amd64.deb
 
 ### Windows环境部署 
 
+推荐使用Ubuntu部署，Windows环境无法静态分析IPA
+
 安装Python
 
 找到对应的Python版本，目前2022.4最新版本推荐Python3.8和Python3.9
@@ -177,9 +179,39 @@ https://mobsf.github.io/docs/#/zh-cn/
 
 ## 使用说明
 
+如果结果需要PDF版本则需要安装PDF，Windows环境还需要设置环境变量
+
+参考https://github.com/JazzCore/python-pdfkit/wiki/Installing-wkhtmltopdf
 
 
-### 与Genymotion对接
+
+### 静态测试
+
+将APK和IPA直接扔进页面即可
+
+
+
+### 动态测试
+
+**Android 5.0 - 10.0** -这些版本使用 **Frida**，开箱即用，无需设置
+
+**Android 4.1 - 4.4** - 这些版本使用 **Xposed Framework** 并要求您在首次进行Dynamic Analysis之前先移动运行时。这些版本还要求在安装Xposed模块后重新引导VM。
+
+
+
+新增ADB系统环境变量以及在<user_home_dir>/.MobSF/config.py中增加ADB的路径
+
+```
+ADB_BINARY = 'D:/Windows10/platform-tools/adb.exe'
+```
+
+如果系统不能连接Github则需要提前下载到frida server android`<user_home_dir>/.MobSF/downloads`目录
+
+https://github.com/frida/frida/releases
+
+
+
+#### Genymotion对接
 
 [已成功测试]
 
@@ -235,7 +267,7 @@ https://blog.csdn.net/yht2004123/article/details/80146989
 
 
 
-### 与VMware模拟Android虚机对接
+#### VMware模拟Android虚机对接
 
 利用VMware安装安卓虚拟机并进行对接，此方式可能需要安装mitmdump
 
@@ -267,7 +299,7 @@ python3 manage.py runserver 0.0.0.0:8081
 
 
 
-### 与夜神模拟器对接
+#### 夜神模拟器对接
 
 先安装ADB
 
@@ -281,19 +313,47 @@ sudo  apt-get install android-tools-adb android-tools-fastboot
 
 从官网下载夜神模拟器后，设置其网络配置，开启其网络桥接功能，如下图所示，配置完成后会要求重启
 
-![](C:\Users\Mia\Desktop\simulator_net_setting.png)
+![](https://raw.githubusercontent.com/coltisa/security_collection/main/mobsf/nox_net_setting.png)
 
-配置MobSF/settings.py的参数
+
+
+*旧版本中在项目目录中配置MobSF/settings.py的参数
 
 ```
-ANALYZER_IDENTIFIER  = '192.168.200.35:5555'
+ANALYZER_IDENTIFIER = '192.168.200.35:5555'
+```
+
+新版本中v3.5 beta中需要到`<user_home_dir>/.MobSF/config.py`路径配置ANALYZER_IDENTIFIER参数
+
+```
+ANALYZER_IDENTIFIER = '192.168.200.35:5555'
+```
+
+修改配置后再执行一次setup.bat/setup.sh，注意可能会检测更新，而更新站点为Github所以最好设置加速
+
+```
+setup.sh
 ```
 
 配置完后开启MobSF服务，进入动态测试页面即可开始测试
 
+使用run.bat/setup.sh开启MobSF服务
+
+```
+run.sh
+```
+
+*旧版本中使用以下命令
+
 ```
 python3 manage.py runserver 0.0.0.0:8081  
 ```
+
+
+
+### Troubleshooting
+
+
 
 
 
