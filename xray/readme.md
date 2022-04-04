@@ -93,7 +93,7 @@
 
 在Burp Suite配置XARY的代理端口即可
 
-![burpsuite_upstream](https://www.miacraft.cn/public/2022/03/21/burpsuite_upstream.png)
+![burpsuite_upstream](https://raw.githubusercontent.com/coltisa/security_collection/main/xray/burpsuite_upstream.png)
 
 
 
