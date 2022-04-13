@@ -14,7 +14,15 @@ MobSF支持静态和动态分析。
 
 ## 部署参考
 
-注意如果要进行动态检测的话不能使用Docker和虚拟机部署，需要使用物理机
+注意：
+
+1.如果要进行动态检测的话不能使用Docker和虚拟机部署，需要使用物理机。
+
+2.实测动态检测配置中Windows下易出现ADB命令错误，可以尝试Windows+[Android Studio 模拟器](https://mobsf.github.io/docs/#/zh-cn/dynamic_analyzer?id=android-studio-模拟器)，或者Ubuntu+局域网的安卓模拟器。
+
+3.静态检测Windows环境不支持检测iOS应用
+
+综上考虑，推荐部署环境为物理机Ubuntu，可以直通Github（需要检查更新）
 
 ### Ubuntu环境部署
 
@@ -197,7 +205,7 @@ https://mobsf.github.io/docs/#/zh-cn/
 
 **Android 4.1 - 4.4** - 这些版本使用 **Xposed Framework** 并要求您在首次进行Dynamic Analysis之前先移动运行时。这些版本还要求在安装Xposed模块后重新引导VM。
 
-
+提示：动态测试需要模拟器或手机有root权限
 
 新增ADB系统环境变量以及在<user_home_dir>/.MobSF/config.py中增加ADB的路径
 
@@ -213,19 +221,11 @@ https://github.com/frida/frida/releases
 
 #### Genymotion对接
 
-[已成功测试]
+环境：Ubuntu 18.04 可上网，最好更改APT安装源
 
-环境信息
+说明：推荐使用此模拟器，其它模拟器都不太稳定。Genymotion首先需要注册账号才能下载，Genymotion&VirtualBox，推荐使用Genymotion对接，使用其他模拟器对接会有adb命令错误
 
-Ubuntu 18.04 可上网，最好更改APT安装源
-
-Genymotion&VirtualBox，推荐使用Genymotion对接，使用其他模拟器对接会有adb命令错误
-
-\#Genymotion首先需要注册账号才能下载
-
-下载链接：
-
-https://www.genymotion.com/download/
+下载：https://www.genymotion.com/download/
 
 \#建议下载带有VirtualBox版本的，直接捆绑VirtualBox安装
 
@@ -234,7 +234,7 @@ https://www.genymotion.com/download/
 在MobSF虚机中先安装ADB和mitmproxy
 
 ```
-sudo  apt-get install android-tools-adb android-tools-fastboot  sudo  apt-get install mitmproxy  
+sudo apt-get install android-tools-adb android-tools-fastboot  sudo  apt-get install mitmproxy  
 ```
 
 MobSF也配置好相应的IP和端口
@@ -299,12 +299,50 @@ python3 manage.py runserver 0.0.0.0:8081
 
 
 
-#### 夜神模拟器对接
+#### AVD模拟器对接
+
+首先安装Android Studio https://developer.android.google.cn/studio/，按照默认步骤安装即可
+
+提示：安装设备模拟器的时候检查一下Android版本，目前MobSF版本支持arm，arm64和x86架构 Android **5.0 - 9.0**, 最高 **API 28**
+
+1.可以先 `adb devices` 看一下设备，然后配置到config文件中
+
+2.AVD模拟器如果需要root则在安装的时候不要选带Google Play的镜像
+
+3.部分机型或系统版本可能有兼容性问题，可以考虑换系统或机型，需要App支持的版本，例如某测试App需要64位系统下才能运行
+
+安装好后用户目录下即有emulator目录，C:\Users\yourname\AppData\Local\Android\Sdk\emulator，可以添加到环境变量中
+
+安装Android系统镜像
+
+打开Android Studio->Tools->Device Manager，在其管理页面有Create device，添加并下载相应的设备型号和系统即可
+
+下载完成后使用emulator.exe，查看设备清单
+
+```
+emulator -list-avds
+```
+
+使用emulator加上设备型号即可开启模拟器
+
+```
+emulator -avd your_avd_name -writable-system -no-snapshot
+```
+
+启动后将相应APK包拖入即可安装相应APK
+
+
+
+
+
+#### 雷电/夜神模拟器对接
+
+说明：优选雷电模拟器4，其次夜神模拟器，此两款模拟器都支持网络桥接。目前MobSF v3.5.2支持雷电4 Android 7.1版本
 
 先安装ADB
 
 ```
-sudo  apt-get install android-tools-adb android-tools-fastboot  
+sudo apt-get install android-tools-adb android-tools-fastboot  
 ```
 
 \#由于夜神模拟器为Android5不能使用XPosed等测试，最好使用Android5以上的版本
@@ -353,13 +391,27 @@ python3 manage.py runserver 0.0.0.0:8081
 
 ### Troubleshooting
 
+#### Update与SSL相关错误
+
+说明：可能是不能连接Github，可以尝试部署翻墙的方式
+
+#### Error Running ADB Command命令相关错误
+
+如果出现adb.exe -s root类似错误，可能是模拟器没有正确获取到root权限
+
+#### 若遇到应用启动不了或其它故障
+
+可以尝试使用 `adb logcat` 查看日志，也可以 `adb shell` 然后 ` logcat | grep app_name` 
+
+#### Genymotion启动报错
+
+可能是VirtualBox网卡配置有问题，更换相关适配器，先启动VirtualBox虚机再启动Genymotion的设备即可
 
 
 
 
-### 使用参考
 
-https://www.jianshu.com/p/f715d3c6a1c7
+
 
  
 
@@ -373,7 +425,9 @@ https://testerhome.com/topics/11293
 
 [http://purpleroc.com/MD/2016-08-31@Android%20Malware%20Analysis%20Tool(1)--MobSF.html](http://purpleroc.com/MD/2016-08-31@Android Malware Analysis Tool(1)--MobSF.html)
 
- 
+MobSF使用参考
+
+https://www.jianshu.com/p/f715d3c6a1c7
 
 
 

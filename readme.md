@@ -64,7 +64,7 @@ Enumeration Sub Domain 子域名扫描工具
 
 
 
-### [Goby](https://cn.gobies.org/)
+## [Goby](https://cn.gobies.org/)
 
 说明：是一款快速梳理资产暴露攻击面的情报挖掘扫描工具，即“网络空间测绘”。可以用来自动爬取子域名、二级域名字典爆破、关联域名查询、支持连接FOFA、XRAY插件、扩大数据源、自定义PoC等
 
@@ -110,6 +110,74 @@ https://github.com/cmcmsec/arachni-ui-web
 
 
 
+## [FFUF](https://github.com/ffuf/ffuf)
+
+[![GitHub stars](https://img.shields.io/github/stars/ffuf/ffuf.svg)]()
+
+说明：进行目录爆破扫描，GET、POST参数爆破
+
+Kali环境示例命令，常规目录扫描
+
+```
+ffuf -u https://target.cn/FUZZ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t 2000 -c
+```
+
+模拟GET参数请求，将FUZZ关键字定义为URL的一部分。假设无效的GET参数名响应为4242字节，将其过滤
+
+```
+ffuf -w /path/to/paramnames.txt -u https://target/script.php?FUZZ=value -fs 4242
+```
+
+模拟GET参数请求，参数名已知，值未知。假设响应代码401为参数值错误，将其过滤
+
+```
+ffuf -w /path/to/values.txt -u https://target/script.php?valid_name=FUZZ -fc 401
+```
+
+模拟POST请求，过滤掉401的返回代码
+
+```
+ffuf -w /path/to/postdata.txt -X POST -d "username=admin\&password=FUZZ" https://target/login.php -fc 401
+```
+
+| 常用参数     | 说明                                      |
+| ------------ | ----------------------------------------- |
+| -u           | 指定URL                                   |
+| -w           | 指定字典文件                              |
+| -t int       | 并发线程数量，默认40                      |
+| -c           | 带颜色输出                                |
+| -H           | 指定Header，"Name: Value"，可以多个-H参数 |
+| -s           | 安静模式，不打印额外信息                  |
+| -x           | HTTP Proxy URL                            |
+| -r           | 跟随重定向                                |
+| -o string    | 输出到文件                                |
+| -of string   | 输出文件格式，json, csv, ecsv，默认json   |
+| -timeout int | 请求超时时间，默认10s                     |
+| -fs string   | 过滤HTTP回复的大小，过滤掉设置值          |
+| -fc string   | 过滤请求响应代码，过滤掉设置值            |
+
+
+
+## [WFuzz](https://github.com/xmendez/wfuzz)
+
+[![GitHub stars](https://img.shields.io/github/stars/xmendez/wfuzz.svg)]()
+
+说明：目录爆破
+
+基本使用，目录爆破，根据字典过滤404响应，对目标URL进行爆破，FUZZ指代爆破部分
+
+```
+wfuzz -w wordlist/general/common.txt --hc 404 http://testphp.vulnweb.com/FUZZ
+```
+
+安装参考，Python环境直接PIP安装
+
+```
+
+```
+
+使用参考：https://wfuzz.readthedocs.io/en/latest/
+
 
 
 ## [linglong](https://github.com/awake1t/linglong)
@@ -119,6 +187,10 @@ https://github.com/cmcmsec/arachni-ui-web
 说明：实测扫描扫出的东西有限，其就是XRAY主动扫描。甲方资产巡航扫描系统。系统定位是发现资产，进行端口爆破。帮助企业更快发现弱口令问题。主要功能包括: 资产探测、端口爆破、定时任务、管理后台识别、报表展示
 
 ![](https://github.com/awake1t/linglong/raw/master/img/index.gif)
+
+
+
+
 
 
 
@@ -391,6 +463,14 @@ GitHub Sensitive Information Leakage
 [![GitHub stars](https://img.shields.io/github/stars/phith0n/Mind-Map.svg)]()
 
 说明：各种安全相关思维导图整理收集
+
+
+
+## [红队攻击思维](https://cloud.tencent.com/developer/article/1480895)
+
+说明：各种学习资料，包括攻防测试手册、CheckList、靶场等
+
+
 
 
 
