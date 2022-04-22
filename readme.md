@@ -16,7 +16,7 @@ Tips：很多都是Star中的，可以去我的Star里面看看
 
 功能：XSS检测、SQL注入、命令/代码注入检测、目录枚举、弱口令检测
 
-[说明和演示](https://github.com/coltisa/security_collection/tree/main/xray)
+[DETAIL](https://github.com/coltisa/security_collection/tree/main/xray)
 
 
 
@@ -82,9 +82,17 @@ Enumeration Sub Domain 子域名扫描工具
 
 [![GitHub stars](https://img.shields.io/github/stars/sullo/nikto.svg)]()
 
-说明：Nikto是一款开源的（GPL）网页服务器扫描器，它可以对网页服务器进行全面的多种扫描。Kali中自带
+说明：Nikto是一款开源的（GPL）网页服务器扫描器，它可以对网页服务器进行全面的多种扫描，可以读出服务版本信息、PHP信息等。Kali集成该工具。
 
 
+
+## [NMAP](https://github.com/nmap/nmap)
+
+[![GitHub stars](https://img.shields.io/github/stars/nmap/nmap.svg)]()
+
+说明：主机扫描，脚本扫描，隐蔽扫描，端口扫描，服务识别，OS识别，探测WAF
+
+[DETAIL](https://github.com/coltisa/security_collection/tree/main/nmap)
 
 
 
