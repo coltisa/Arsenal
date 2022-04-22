@@ -16,9 +16,15 @@ Tips：很多都是Star中的，可以去我的Star里面看看
 
 功能：XSS检测、SQL注入、命令/代码注入检测、目录枚举、弱口令检测
 
-
-
 [说明和演示](https://github.com/coltisa/security_collection/tree/main/xray)
+
+
+
+## [RAD](https://github.com/chaitin/rad)
+
+说明：Rad主要是可以通过爬取网站的URL，泛洪辐射到全站，从一个URL开始，辐射到一整个站点空间，一款专为安全扫描而生的浏览器爬虫，也是长亭的可以配合XRAY使用
+
+[![GitHub stars](https://img.shields.io/github/stars/chaitin/rad.svg)]()
 
 
 
@@ -72,11 +78,13 @@ Enumeration Sub Domain 子域名扫描工具
 
 
 
-## [RAD](https://github.com/chaitin/rad)
+## [Nikto](https://github.com/sullo/nikto)
 
-说明：Rad主要是可以通过爬取网站的URL，泛洪辐射到全站，从一个URL开始，辐射到一整个站点空间，一款专为安全扫描而生的浏览器爬虫，也是长亭的可以配合XRAY使用
+[![GitHub stars](https://img.shields.io/github/stars/sullo/nikto.svg)]()
 
-[![GitHub stars](https://img.shields.io/github/stars/chaitin/rad.svg)]()
+说明：Nikto是一款开源的（GPL）网页服务器扫描器，它可以对网页服务器进行全面的多种扫描。Kali中自带
+
+
 
 
 
@@ -90,7 +98,7 @@ Web Application Security Scanner Framework
 
 Arachni - Web User Interface
 
-https://github.com/cmcmsec/arachni-ui-web
+UI: https://github.com/cmcmsec/arachni-ui-web
 
 
 
@@ -170,10 +178,10 @@ ffuf -w /path/to/postdata.txt -X POST -d "username=admin\&password=FUZZ" https:/
 wfuzz -w wordlist/general/common.txt --hc 404 http://testphp.vulnweb.com/FUZZ
 ```
 
-安装参考，Python环境直接PIP安装
+安装参考，Python环境直接PIP安装（需要找到对应的版本）
 
 ```
-
+pip install wfuzz
 ```
 
 使用参考：https://wfuzz.readthedocs.io/en/latest/
@@ -469,6 +477,12 @@ GitHub Sensitive Information Leakage
 ## [红队攻击思维](https://cloud.tencent.com/developer/article/1480895)
 
 说明：各种学习资料，包括攻防测试手册、CheckList、靶场等
+
+
+
+## [火线ZONE](https://zone.huoxian.cn/)
+
+说明：各种学习资料，工具、渗透姿势等
 
 
 
