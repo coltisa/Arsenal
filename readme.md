@@ -156,21 +156,22 @@ ffuf -w /path/to/values.txt -u https://target/script.php?valid_name=FUZZ -fc 401
 ffuf -w /path/to/postdata.txt -X POST -d "username=admin\&password=FUZZ" https://target/login.php -fc 401
 ```
 
-| 常用参数     | 说明                                      |
-| ------------ | ----------------------------------------- |
-| -u           | 指定URL                                   |
-| -w           | 指定字典文件                              |
-| -t int       | 并发线程数量，默认40                      |
-| -c           | 带颜色输出                                |
-| -H           | 指定Header，"Name: Value"，可以多个-H参数 |
-| -s           | 安静模式，不打印额外信息                  |
-| -x           | HTTP Proxy URL                            |
-| -r           | 跟随重定向                                |
-| -o string    | 输出到文件                                |
-| -of string   | 输出文件格式，json, csv, ecsv，默认json   |
-| -timeout int | 请求超时时间，默认10s                     |
-| -fs string   | 过滤HTTP回复的大小，过滤掉设置值          |
-| -fc string   | 过滤请求响应代码，过滤掉设置值            |
+| 常用参数       | 说明                                      |
+| -------------- | ----------------------------------------- |
+| -u             | 指定URL                                   |
+| -w             | 指定字典文件                              |
+| -t int         | 并发线程数量，默认40                      |
+| -c             | 带颜色输出                                |
+| -H             | 指定Header，"Name: Value"，可以多个-H参数 |
+| -s             | 安静模式，不打印额外信息                  |
+| -x             | HTTP Proxy URL                            |
+| -r             | 跟随重定向                                |
+| -o string      | 输出到文件                                |
+| -of string     | 输出文件格式，json, csv, ecsv，默认json   |
+| -timeout int   | 请求超时时间，默认10s                     |
+| -fs string     | 过滤HTTP回复的大小，过滤掉设置值          |
+| -fc string     | 过滤请求响应代码，过滤掉设置值            |
+| -recursion num | 递归路径扫描                              |
 
 
 
@@ -317,6 +318,18 @@ MobSF支持静态和动态分析。
 
 
 
+
+## 浏览器插件
+
+### ModHeader
+
+说明：增加浏览器请求参数的插件
+
+
+
+### SwitchOmega
+
+说明：浏览器代理插件，支持Sock4\5、HTTP协议
 
 
 
@@ -556,7 +569,12 @@ GitHub Sensitive Information Leakage
 
 说明：基于PHP，可以使用Docker部署。一个好玩的Web安全-漏洞测试平台
 
+Github下载Pikachu之后使用Docker运行
 
+```
+docker build -t "pikachu" .
+docker run -d -p 80:80 pikachu
+```
 
 
 
