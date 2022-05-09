@@ -28,6 +28,24 @@ Tips：很多都是Star中的，可以去我的Star里面看看
 
 
 
+Nuclei
+
+
+
+Kali安装
+
+```
+apt install nuclei -y
+```
+
+批量扫描
+
+```
+nuclei -list urls.txt
+```
+
+
+
 ## [Ary](https://github.com/TeraSecTeam/ary)
 
 [![GitHub stars](https://img.shields.io/github/stars/TeraSecTeam/ary.svg)]()
@@ -83,6 +101,26 @@ Enumeration Sub Domain 子域名扫描工具
 [![GitHub stars](https://img.shields.io/github/stars/sullo/nikto.svg)]()
 
 说明：Nikto是一款开源的（GPL）网页服务器扫描器，它可以对网页服务器进行全面的多种扫描，可以读出服务版本信息、PHP信息等。Kali集成该工具。
+
+
+
+## Nessus
+
+说明：一款综合漏洞扫描工具。
+
+
+
+## AWVS
+
+
+
+## Netsparker
+
+
+
+## AppScan
+
+
 
 
 
@@ -156,22 +194,21 @@ ffuf -w /path/to/values.txt -u https://target/script.php?valid_name=FUZZ -fc 401
 ffuf -w /path/to/postdata.txt -X POST -d "username=admin\&password=FUZZ" https://target/login.php -fc 401
 ```
 
-| 常用参数       | 说明                                      |
-| -------------- | ----------------------------------------- |
-| -u             | 指定URL                                   |
-| -w             | 指定字典文件                              |
-| -t int         | 并发线程数量，默认40                      |
-| -c             | 带颜色输出                                |
-| -H             | 指定Header，"Name: Value"，可以多个-H参数 |
-| -s             | 安静模式，不打印额外信息                  |
-| -x             | HTTP Proxy URL                            |
-| -r             | 跟随重定向                                |
-| -o string      | 输出到文件                                |
-| -of string     | 输出文件格式，json, csv, ecsv，默认json   |
-| -timeout int   | 请求超时时间，默认10s                     |
-| -fs string     | 过滤HTTP回复的大小，过滤掉设置值          |
-| -fc string     | 过滤请求响应代码，过滤掉设置值            |
-| -recursion num | 递归路径扫描                              |
+| 常用参数     | 说明                                      |
+| ------------ | ----------------------------------------- |
+| -u           | 指定URL                                   |
+| -w           | 指定字典文件                              |
+| -t int       | 并发线程数量，默认40                      |
+| -c           | 带颜色输出                                |
+| -H           | 指定Header，"Name: Value"，可以多个-H参数 |
+| -s           | 安静模式，不打印额外信息                  |
+| -x           | HTTP Proxy URL                            |
+| -r           | 跟随重定向                                |
+| -o string    | 输出到文件                                |
+| -of string   | 输出文件格式，json, csv, ecsv，默认json   |
+| -timeout int | 请求超时时间，默认10s                     |
+| -fs string   | 过滤HTTP回复的大小，过滤掉设置值          |
+| -fc string   | 过滤请求响应代码，过滤掉设置值            |
 
 
 
@@ -312,7 +349,6 @@ MobSF支持静态和动态分析。
 说明参考：https://mp.weixin.qq.com/s?__biz=MzUyMTE0MDQ0OA==&mid=2247491498&idx=1&sn=c2f33f7c09690786fe50dc9d6efe17a4
 
 
-
 ## 目录扫描工具
 
 
@@ -330,6 +366,24 @@ MobSF支持静态和动态分析。
 ### SwitchOmega
 
 说明：浏览器代理插件，支持Sock4\5、HTTP协议
+
+
+
+## Dirbuster
+
+说明：目录扫描工具。已集成到Kali中。
+
+Kali用法
+
+```
+dirbruster
+```
+
+图形化界面设置
+
+首先设置目标地址，其次设置字典，路径位于 `/usr/share/dirbuster/wordlists/directory-list-1.0.txt` ，可以执行标准地探测Standard start point和URL Fuzz，设置Fuzz路径扫描 `/admin/{dir}/`
+
+参考：https://blog.csdn.net/weixin_41489908/article/details/115434107
 
 
 
@@ -559,6 +613,16 @@ GitHub Sensitive Information Leakage
 
 
 
+# Wordlist and Dictionary
+
+
+
+
+
+https://www.invicti.com/blog/web-security/svn-digger-better-lists-for-forced-browsing/
+
+
+
 # 靶场与练习
 
 
@@ -569,12 +633,7 @@ GitHub Sensitive Information Leakage
 
 说明：基于PHP，可以使用Docker部署。一个好玩的Web安全-漏洞测试平台
 
-Github下载Pikachu之后使用Docker运行
 
-```
-docker build -t "pikachu" .
-docker run -d -p 80:80 pikachu
-```
 
 
 
