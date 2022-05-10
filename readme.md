@@ -112,6 +112,26 @@ Enumeration Sub Domain 子域名扫描工具
 
 ## AWVS
 
+说明：是一个自动化的Web应用程序安全测试工具，它可以扫描任何可通过Web浏览器访问的和遵循HTTP/HTTPS规则的Web站点和Web应用程序。可以录制操作动作针对登录后的站点进行逻辑遍历。
+
+WebScanner ：核心功能，安全漏洞扫描
+
+Site Crawler：站点爬行，遍历站点目录结构
+
+Target Finder ：主机发现，找出给定网段中开启了80和443端口的主机
+
+Subdomian Scanner ：子域名扫描器，利用DNS查询
+
+Blind SQL Injector ：盲注工具
+
+Http Editor http：协议数据包编辑器
+
+HTTP Sniffer ： HTTP协议嗅探器 
+
+HTTP Fuzzer： 模糊测试工具
+
+Authentication Tester ：Web认证破解工具
+
 
 
 ## Netsparker
