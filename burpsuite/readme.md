@@ -1,12 +1,4 @@
-
-
-
-
-
-
 过滤排除项目
-
-
 
 浏览器
 
@@ -14,10 +6,6 @@
 *.chrome.*
 *.mozilla.*
 ```
-
-
-
-
 
 Google相关
 
@@ -33,8 +21,6 @@ Google相关
 *.gstatic.*
 ```
 
-
-
 搜索引擎
 
 ```
@@ -47,8 +33,6 @@ Google相关
 *.microsoft.*
 *.bing.*
 ```
-
-
 
 社区和博客文章
 
@@ -108,19 +92,11 @@ Google相关
 *.zemanta.*
 ```
 
-
-
-
-
 ## 参考
-
-
 
 基本使用
 
 https://blog.csdn.net/q0717168/article/details/118035672
-
-
 
 Burp Suite详细基本用法一：Proxy、Target模块
 
@@ -134,14 +110,13 @@ Burp Suite详细基本用法三：Repeater、Sequencer、Decoder、Comparer模�
 
 https://blog.csdn.net/lynnlinlin/article/details/77488947
 
- 
-
 代理设置小技巧
 
 https://www.anquanke.com/post/id/85925
 
- 
-
 专业版破解教程
 
 http://www.xue51.com/soft/36653.html
+
+破解版下载
+https://www.iculture.cc/category/software
