@@ -203,6 +203,18 @@ ffuf -w /path/to/postdata.txt -X POST -d "username=admin\&password=FUZZ" https:/
 ```
 wfuzz -w wordlist/general/common.txt --hc 404 http://testphp.vulnweb.com/FUZZ
 ```
+递归，递归层级为4
+```
+wfuzz -w big.txt -R 4 --hc 404 http://example.com/FUZZ 
+
+```
+保存结果
+
+```
+ wfuzz -f outfile,json -w wordlist URL/FUZZ
+```
+
+
 
 安装参考，Python环境直接PIP安装（需要找到对应的版本）
 
