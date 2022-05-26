@@ -1,18 +1,10 @@
 ## [AWVS]()
 
-
-
 ## 使用参考
-
-
 
 参考链接：https://blog.csdn.net/BlackEnn/article/details/106577619
 
-
-
 ## 部署参考
-
-
 
 ### Docker部署
 
@@ -40,11 +32,8 @@ password: Admin123
 
 参考链接：https://blog.csdn.net/jcmj123456/article/details/114272715
 
- 
-
 ## 参考链接
 
 其它工具联动姿势
 
 ### **[AWVS14-Scan](https://github.com/test502git/awvs14-scan)**
-
