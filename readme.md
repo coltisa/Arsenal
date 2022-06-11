@@ -12,7 +12,7 @@ Tips：很多都是Star中的，可以去我的Star里面看看
 
 功能：XSS检测、SQL注入、命令/代码注入检测、目录枚举、弱口令检测
 
-[DETAIL](https://github.com/coltisa/security_collection/tree/main/xray)
+[详情](https://github.com/coltisa/security_collection/tree/main/xray)
 
 ## [RAD](https://github.com/chaitin/rad)
 
@@ -20,7 +20,11 @@ Tips：很多都是Star中的，可以去我的Star里面看看
 
 [![GitHub stars](https://img.shields.io/github/stars/chaitin/rad.svg)]()
 
-Nuclei
+
+
+## [Nuclei](https://github.com/projectdiscovery/nuclei)
+
+[![GitHub stars](https://img.shields.io/github/stars/projectdiscovery/nuclei.svg)](https://img.shields.io/github/stars/chaitin/nuclei)
 
 Kali安装
 
@@ -33,6 +37,10 @@ apt install nuclei -y
 ```
 nuclei -list urls.txt
 ```
+
+[详情](https://github.com/coltisa/security_collection/tree/main/nuclei)
+
+
 
 ## [Ary](https://github.com/TeraSecTeam/ary)
 
@@ -84,23 +92,21 @@ Enumeration Sub Domain 子域名扫描工具
 
 说明：是一个自动化的Web应用程序安全测试工具，它可以扫描任何可通过Web浏览器访问的和遵循HTTP/HTTPS规则的Web站点和Web应用程序。可以录制操作动作针对登录后的站点进行逻辑遍历。
 
-WebScanner ：核心功能，安全漏洞扫描
+| 功能                  | 描述                                            |
+| --------------------- | ----------------------------------------------- |
+| WebScanner            | 核心功能，安全漏洞扫描                          |
+| Site Crawler          | 站点爬行，遍历站点目录结构                      |
+| Target Finder         | 主机发现，找出给定网段中开启了80和443端口的主机 |
+| Subdomian Scanner     | 子域名扫描器，利用DNS查询                       |
+| Blind SQL Injector    | 盲注工具                                        |
+| HTTP Editor           | 协议数据包编辑器                                |
+| HTTP Sniffer          | HTTP协议嗅探器                                  |
+| HTTP Fuzzer           | 模糊测试工具                                    |
+| Authentication Tester | Web认证破解工具                                 |
 
-Site Crawler：站点爬行，遍历站点目录结构
+[详情](https://github.com/coltisa/Security_Collection/tree/main/awvs)
 
-Target Finder ：主机发现，找出给定网段中开启了80和443端口的主机
 
-Subdomian Scanner ：子域名扫描器，利用DNS查询
-
-Blind SQL Injector ：盲注工具
-
-Http Editor http：协议数据包编辑器
-
-HTTP Sniffer ： HTTP协议嗅探器 
-
-HTTP Fuzzer： 模糊测试工具
-
-Authentication Tester ：Web认证破解工具
 
 ## Netsparker
 
@@ -110,7 +116,11 @@ Authentication Tester ：Web认证破解工具
 
 可以进行动态登录扫描，需要以管理员身份运行
 
-[Netsparker Standard 教程」 - 网安](https://www.wangan.com/docs/628)
+[Netsparker Standard 教程](https://www.wangan.com/docs/628)
+
+
+
+
 
 ## AppScan
 
@@ -120,7 +130,7 @@ Authentication Tester ：Web认证破解工具
 
 说明：主机扫描，脚本扫描，隐蔽扫描，端口扫描，服务识别，OS识别，探测WAF
 
-[DETAIL](https://github.com/coltisa/security_collection/tree/main/nmap)
+[详情](https://github.com/coltisa/security_collection/tree/main/nmap)
 
 ## [Arachni](https://github.com/cmcmsec/arachni)
 
@@ -232,6 +242,16 @@ pip install wfuzz
 
 ![](https://github.com/awake1t/linglong/raw/master/img/index.gif)
 
+
+
+## [XSStrike](https://github.com/s0md3v/XSStrike)
+
+[![GitHub stars](https://img.shields.io/github/stars/s0md3v/XSStrike.svg)]()
+
+XSS测试工具
+
+
+
 # 其它工具
 
 ## [Proxies](https://github.com/0xHJK/Proxies)
@@ -307,6 +327,16 @@ MobSF支持静态和动态分析。
 说明：OpenCTI 即 Open Cyber Threat Intelligence Platform，开源网络威胁情报平台。它的创建是为了构建、存储、组织和可视化有关网络威胁的技术和非技术信息。它使用基于 STIX 2 标准的知识模式来执行数据的结构化。并被设计为现代 Web 应用程序，包括 GraphQL API 和面向 UX的前端。此外，OpenCTI 可以与其他工具和应用程序集成，如 MISP、TheHive、MITRE ATT&CK 等
 
 说明参考：https://mp.weixin.qq.com/s?__biz=MzUyMTE0MDQ0OA==&mid=2247491498&idx=1&sn=c2f33f7c09690786fe50dc9d6efe17a4
+
+## [AppInfoScanner](https://github.com/cqkenuo/AppInfoScanner)
+
+[![GitHub stars](https://img.shields.io/github/stars/cqkenuo/AppInfoScanner.svg)]()
+
+一款适用于(Android、iOS、WEB、H5、静态网站)，信息检索的工具，可以帮助渗透测试人员快速获取App或者WEB中的有用资产信息
+
+
+
+
 
 ## 目录扫描工具
 
@@ -466,6 +496,14 @@ GitHub Sensitive Information Leakage
 
 说明：各种学习资料，工具、渗透姿势等
 
+## [Vehicle-Security-Toolkit](https://github.com/VulnTotal-Team/Vehicle-Security-Toolkit)
+
+[![GitHub stars](https://img.shields.io/github/stars/VulnTotal-Team/Vehicle-Security-Toolkit.svg)]()
+
+汽车/安卓/固件/代码安全测试工具集
+
+
+
 # 防御工具
 
 ## [X-WAF](https://github.com/xsec-lab/x-waf)
@@ -510,6 +548,14 @@ https://www.invicti.com/blog/web-security/svn-digger-better-lists-for-forced-bro
 
 # 靶场与练习
 
+## [Vulhub](https://github.com/vulhub/vulhub)
+
+[![GitHub stars](https://img.shields.io/github/stars/vulhub/vulhub.svg)]()
+
+下载地址：https://www.vulnhub.com/entry/evilbox-one,736/
+
+Vulhub测试说明：https://www.freebuf.com/articles/web/335263.html
+
 ## [Pikachu](https://github.com/zhuifengshaonianhanlu/pikachu)
 
 [![GitHub stars](https://img.shields.io/github/stars/zhuifengshaonianhanlu/pikachu.svg)]()
@@ -523,6 +569,18 @@ https://www.invicti.com/blog/web-security/svn-digger-better-lists-for-forced-bro
 说明：TIWAP是一款包含大量漏洞的Web应用渗透测试学习工具，同时也开始一个Web安全测试平台，该工具基于Python和Flask实现其功能。当前版本的TIWAP实验环境中包含了二十种安全漏洞，具体如下所示：、SQL注入、Blind SQL注入、NoSQL注入、Command注入、业务逻辑漏洞、敏感数据泄露、XML外部实体、安全错误配置、反射型XSS、存储型XSS、基于DOM的XSS、HTML注入、不安全的证书验证、硬编码Credentials、不安全的文件上传、暴力破解、目录遍历、跨站请求伪造(CSRF)、服务器端请求伪造(SSRF)、服务器端模板注入(SSTI)
 
 说明参考：https://mp.weixin.qq.com/s?__biz=MjM5NjA0NjgyMA==&mid=2651154560&idx=4&sn=92d991f201725307b8c8fe339d4ad765
+
+
+
+## [IoT-Vulhub](https://github.com/VulnTotal-Team/IoT-vulhub)
+
+[![GitHub stars](https://img.shields.io/github/stars/VulnTotal-Team/IoT-vulhub.svg)]()
+
+受 [Vulhub](https://github.com/vulhub/vulhub) 项目的启发，一个 IoT 版的固件漏洞复现环境，目前有[Cisco/CVE-2020-3331](https://github.com/VulnTotal-Team/IoT-vulhub/tree/master/Cisco/CVE-2020-3331)、[HUAWEI/CVE-2017-17215](https://github.com/VulnTotal-Team/IoT-vulhub/tree/master/HUAWEI/CVE-2017-17215)、[TP-Link](https://github.com/VulnTotal-Team/IoT-vulhub/tree/master/TP-Link) 等漏洞复现环境
+
+
+
+
 
 ## Hack The Box
 
@@ -540,9 +598,49 @@ https://www.cnblogs.com/black--horse/p/14705919.html
 
 # 社区与平台
 
-安全导航
+### TOOLS安全导航
 
-[安全站点导航（感谢backlion整理） - T00ls.Com](https://www.t00ls.cc/navi.html)
+[安全站点导航-Backlion整理 - T00ls.Com](https://www.t00ls.cc/navi.html)
+
+
+
+
+
+### Tide安全团队
+
+https://www.tidesec.com/
+
+#### 文库
+
+包含漏洞武器库、红蓝对抗、免杀、移动安全、IoT物联网、代码审计、工控、应急响应、社工钓鱼、测试用例
+
+http://wiki.tidesec.com/
+
+远控免杀 Wiki
+http://wiki.tidesec.com/docs/bypassav
+红蓝对抗 Wiki
+http://wiki.tidesec.com/docs/RedTeam
+ICS工控安全
+http://wiki.tidesec.com/docs/ICS
+IoT物联网安全
+http://wiki.tidesec.com/docs/IoT
+APP移动安全
+http://wiki.tidesec.com/docs/APP
+CobaltStrike
+http://wiki.tidesec.com/docs/CobaltStrike
+应急响应 Wiki
+http://wiki.tidesec.com/docs/Emergency
+代码审计 Wiki
+http://wiki.tidesec.com/docs/CodeAudit
+密码学 Wiki
+http://wiki.tidesec.com/docs/Crypto
+
+#### 导航
+
+http://paper.tidesec.com/
+
+
+
 参考链接
 
 渗透测试工具库 https://www.bilibili.com/read/cv7778176

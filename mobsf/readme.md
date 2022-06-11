@@ -283,7 +283,7 @@ sudo  apt-get install android-tools-adb android-tools-fastboot  sudo  apt-get in
 
 使用其虚拟机中的终端模拟器，输入ip add命令即可查看其IP
 
-![](https://raw.githubusercontent.com/coltisa/security_collection/main/mobsf/simulator_terminal.png)
+![](https://static.miacraft.cn/github/security_collection/mobsf/simulator_terminal.png)
 
 配置MobSF/settings.py的参数，其中IP即为Android虚机的IP
 
@@ -351,7 +351,7 @@ sudo apt-get install android-tools-adb android-tools-fastboot
 
 从官网下载夜神模拟器后，设置其网络配置，开启其网络桥接功能，如下图所示，配置完成后会要求重启
 
-![](https://raw.githubusercontent.com/coltisa/security_collection/main/mobsf/nox_net_setting.png)
+![](https://static.miacraft.cn/github/security_collection/mobsf/nox_net_setting.png)
 
 
 
