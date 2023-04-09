@@ -163,7 +163,7 @@ https://pypi.org/project/google-play-scraper/#files
 
 例如frida需要手动进行安装，且Python3.8对应的frida Windows下只有15.1.14，所以需要手动安装
 
-到PyPi站点https://pypi.org/project/frida/15.1.14/#files下载TAR压缩包，解压后包然后手动安装
+到[PyPi站点](https://pypi.org/project/frida/15.1.14/)下载TAR压缩包，解压后包然后手动安装
 
 
 
