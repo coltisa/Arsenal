@@ -1,5 +1,6 @@
 Sitemap可以提取所有访问过的URL
-
+在Target->Scope Setting->Scope->Exclude from scope
+注意：Use advance scope control勾起来之后直接load文件就可以批量导入
 
 过滤排除项目
 
